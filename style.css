@@ -1,0 +1,223 @@
+/* css reset */
+*{
+    margin:0;
+    padding:0;
+}
+
+/* navigation bar */
+#navbar{
+    display:flex;
+    align-items: center;
+}
+
+/* navigation bar:logo styling */
+#logo{
+    margin:10px 10px;
+}
+
+#logo img{
+    margin:3px 6px;
+    height:55px;
+    width:60px;
+}
+
+/* navigation bar:list styling */
+#navbar{
+    position: relative;
+}
+#navbar ul{
+    display:flex;
+}
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    height:100%;
+    width:100%;
+    position:absolute;
+    z-index: -1;
+    opacity:0.3;
+    top:0;
+    left:0;
+
+}
+#navbar ul li a{
+    color:white;
+    display:block;
+    /* to set padding it needs to be block */
+    padding:3px 22px;
+    margin:10px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color: cornsilk;
+}
+
+/* home section */
+#home{
+    display:flex;
+    flex-direction: column;
+    padding:3px 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:550px;
+    /* something weird happend here in responsive design in inspec its proportion change had to change #home:height and
+    #home::before:height*/
+
+}
+#home::before{
+    content: "";
+    background:url(food_1.jpg) no-repeat center center/cover;
+    height:642px;
+    width:100%;
+    position:absolute;
+    z-index: -1;
+    opacity:0.89;
+    top:0;
+    left:0;
+}
+#home h1{
+    color:white;
+    text-align: center;
+    font-size: 3.8rem;
+    padding:12px;
+}
+#home p{
+    color:white;
+    font-size: 1.5rem;
+}
+/* services section */
+#services{
+    margin:34px;
+    display:flex;
+}
+/* is heading ko target krne ke liye class banai is nam ki */
+.services h1{
+    display:block;
+    margin:6px
+}
+#services .box{
+    border:2px solid brown;
+    padding:34px 23px;
+    margin:3px 30px;
+    border-radius: 23px;
+    background-color: blanchedalmond;
+    /* display:flex; */
+    
+}
+#services .box img{
+    display:block;
+    height:150px;
+    margin:auto;
+
+}
+
+/* client sction */
+#clients{
+    display:flex;
+    /* background-color: black; */
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+#clients img{
+    height:124px;
+}
+.items{
+    padding:34px;
+
+}
+.clients-section{
+    position:relative;
+    /* relative se ye pure bache page pe ni felegi */
+    /* height:344px; */
+}
+.clients-section::before{
+    content: "";
+    position:absolute;
+    background:url(food_2.jpg) center;
+    z-index: -1;
+    opacity:0.5;
+    height:100%;
+    width:100%;
+}
+
+/* contact section */
+.contacts-section{
+    position:relative;
+    height:300px;
+    /* display: flex; */
+
+}
+.contacts-section::before{
+    content:"";
+    position:absolute;
+    z-index: -1;
+    opacity:0.5;
+    background:url(logo_media.jpg) no-repeat center center/cover ;
+    height:100%;
+    width:100%;
+
+}
+
+.form{
+    text-align: center;
+    padding:3px 200px ;
+}
+.form input,.form select{
+    text-align: center;
+        display: block;
+        width: 476px;
+        padding: 4px;
+        border: 2px solid black;
+        margin: 5px auto;
+        border-radius: 9px;
+        font-size: 18px;
+}
+
+
+footer{
+    background-color: black;
+    color:white;
+    padding:10px 20px;
+    font-size: larger;
+
+
+}
+
+
+/* utility class */
+
+.heading{
+    font-size: 3.8rem;
+    padding:12px;
+    text-align: center;
+}
+.heading2{
+    font-size: 2.8rem;
+    padding: 12px;
+    text-align: center;
+}
+.btn{
+    border:2px solid white;
+    background-color: brown;
+    color:white;
+    padding:6px 20px;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: darkred;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
